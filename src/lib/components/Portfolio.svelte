@@ -130,7 +130,7 @@
 	/*----> PORTFOLIO SECTION <----*/
 
 	#portfolio {
-		background-image: linear-gradient(#00000084, #00000067), url('/wallpaper.jpg');
+		background-image: linear-gradient(#00000084, #00000067), url('../images/wallpaper.jpg');
 		background-position: center;
 		padding: 0;
 		padding-bottom: 80px;

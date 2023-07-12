@@ -59,7 +59,7 @@
 		min-height: 560px;
 		height: fit-content;
 		background: linear-gradient(135deg, var(--secondary-color), var(--secondary-color-shadow)),
-			url('wallpaper.jpg');
+			url('../images/wallpaper.jpg');
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
