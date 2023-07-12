@@ -1,199 +1,204 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
 
 :root {
-  --primary-color: #39e8c7;
-  --primary-color-shadow: #39e8c852;
-  --primary-color-dark: #0e6958;
-  --secondary-color: #0b0b0b;
-  --secondary-color-shadow: #0b0b0bb0;
-  --text-color: white;
-  --text-color-shadow: rgba(255, 255, 255, 0.659);
-  --blue-green-mixed: linear-gradient(351deg, rgba(8,255,115,1) 0%, rgba(8,213,255,1) 100%);
-  --default-padding: 85px;
-  --heading-font-size: 24pt;
-  --info-font-size: 16pt;
+	--primary-color: #39e8c7;
+	--primary-color-shadow: #39e8c852;
+	--primary-color-dark: #0e6958;
+	--secondary-color: #0b0b0b;
+	--secondary-color-shadow: #0b0b0bb0;
+	--text-color: white;
+	--text-color-shadow: rgba(255, 255, 255, 0.659);
+	--blue-green-mixed: linear-gradient(351deg, rgba(8, 255, 115, 1) 0%, rgba(8, 213, 255, 1) 100%);
+	--default-padding: 85px;
+	--heading-font-size: 24pt;
+	--info-font-size: 16pt;
 }
 
 @keyframes ElementScale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 
 @keyframes animateTriangle {
-  0% {
-    transform: rotate(-85deg);
-  }
-  50% {
-    transform: rotate(-105deg);
-  }
-  100% {
-    transform: rotate(-85deg);
-  }
+	0% {
+		transform: rotate(-85deg);
+	}
+	50% {
+		transform: rotate(-105deg);
+	}
+	100% {
+		transform: rotate(-85deg);
+	}
 }
 
 @keyframes animatePattern {
-  0% {
-    transform: rotate(80deg);
-  }
-  50% {
-    transform: rotate(100deg);
-  }
-  100% {
-    transform: rotate(80deg);
-  }
+	0% {
+		transform: rotate(80deg);
+	}
+	50% {
+		transform: rotate(100deg);
+	}
+	100% {
+		transform: rotate(80deg);
+	}
 }
 
 html {
-  scroll-behavior: smooth; 
+	scroll-behavior: smooth;
 }
 
 /*Scroll Bar*/
 ::-webkit-scrollbar {
-  width: 7px !important;
+	width: 7px !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color) !important;
-  border-radius: 50px !important;
+	background-color: var(--primary-color) !important;
+	border-radius: 50px !important;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgb(38, 38, 38) !important;
+	background-color: rgb(38, 38, 38) !important;
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  overflow-x: hidden;
-  color: var(--text-color);
-  background: radial-gradient(
-    circle,
-    rgb(58, 58, 58) 0%,
-    rgb(28, 28, 28) 70%,
-    rgba(11, 11, 11, 1) 100%
-  );
-  min-height: 100vh;
-  width: 100%;
-  display: grid;
-  padding-top: 65px;
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+	color: var(--text-color);
+	background: radial-gradient(
+		circle,
+		rgb(58, 58, 58) 0%,
+		rgb(28, 28, 28) 70%,
+		rgba(11, 11, 11, 1) 100%
+	);
+	min-height: 100vh;
+	width: 100%;
+	display: grid;
+	padding-top: 65px;
 }
 
-a, a.link {
-  color: var(--text-color);
-  text-decoration: none;
+a,
+a.link {
+	color: var(--text-color);
+	text-decoration: none;
 }
 
-ul > li, .card, .list_item, li {
-  list-style: none;
+ul > li,
+.card,
+.list_item,
+li {
+	list-style: none;
 }
 
 .red-color {
-    font-weight: 700;
-    color: #ed0e28;
-  }
-  
-  .hidden {
-    display: none!important;
-  }
-  
-  .scale-element {
-    transform: scale(1.06)!important;
-  }
-  
-  .badge {
-    padding: 1px 3px;
-    border-radius: 4px;
-    font-size: 6pt;
-    position: absolute;
-    right: -24px;
-    top: -5px;
-  }
-  
-  .new-badge {
-    background: var(--blue-green-mixed);
-    color: var(--secondary-color);
-  }
+	font-weight: 700;
+	color: #ed0e28;
+}
 
-  .footer__link > .icon {
-  color: var(--primary-color);
-  font-size: 30pt;
+.hidden {
+	display: none !important;
+}
+
+.scale-element {
+	transform: scale(1.06) !important;
+}
+
+.badge {
+	padding: 1px 3px;
+	border-radius: 4px;
+	font-size: 6pt;
+	position: absolute;
+	right: -24px;
+	top: -5px;
+}
+
+.new-badge {
+	background: var(--blue-green-mixed);
+	color: var(--secondary-color);
+}
+
+.footer__link > .icon {
+	color: var(--primary-color);
+	font-size: 30pt;
 }
 
 .footer__link:hover > .icon {
-    color: var(--secondary-color);
-  }
+	color: var(--secondary-color);
+}
 
-  
-#skills > .skill-container, #achievements {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
-  
-  .skill-title, .achievements__title {
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-weight: 700;
-    font-size: 18pt;
-  }
-  
-  section .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: center;
-    width: 70%;
-    margin: auto;
-  }
-  
-  .card-container > .card {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 30%;
-    max-width: 270px;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 20px;
-    background: var(--secondary-color-shadow);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 10px;
-    border: 1px solid var(--secondary-color);
-  }
-  
-  .card .card__image {
-    width: 50%;
-    border-radius: 10px;
-  }
-  
-  .card > .card__info {
-    color: var(--primary-color);
-    font-weight: 500;
-    font-size: 18pt;
-    letter-spacing: 3px;
-  }
-  
-  .achievements__card > .card__info {
-    font-size: 14pt;
-  }
-  
-  section {
-    padding: 45px 20px;
-  }
+#skills > .skill-container,
+#achievements {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	text-align: center;
+}
+
+.skill-title,
+.achievements__title {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-weight: 700;
+	font-size: 18pt;
+}
+
+section .card-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-content: center;
+	width: 70%;
+	margin: auto;
+}
+
+.card-container > .card {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 30%;
+	max-width: 270px;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 20px;
+	background: var(--secondary-color-shadow);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-radius: 10px;
+	border: 1px solid var(--secondary-color);
+}
+
+.card .card__image {
+	width: 50%;
+	border-radius: 10px;
+}
+
+.card > .card__info {
+	color: var(--primary-color);
+	font-weight: 500;
+	font-size: 18pt;
+	letter-spacing: 3px;
+}
+
+.achievements__card > .card__info {
+	font-size: 14pt;
+}
+
+section {
+	padding: 45px 20px;
+}
