@@ -46,3 +46,56 @@
 		{/each}
 	</div>
 </section>
+
+<style>
+	@media (max-width: 400px) {
+		.achievements__card > .card__info {
+			font-size: 12pt;
+			letter-spacing: 2px;
+		}
+		.achievements__title {
+			letter-spacing: 4px;
+			font-size: 14pt;
+		}
+	}
+
+	@media (min-width: 401px) and (max-width: 600px) {
+		.achievements__card > .card__info {
+			font-size: 12pt;
+			letter-spacing: 2px;
+		}
+	}
+
+	@media (min-width: 601px) and (max-width: 750px) {
+		.achievements__card > .card__info {
+			font-size: 13pt;
+			letter-spacing: 2px;
+		}
+		.achievements__title {
+			letter-spacing: 4px;
+			font-size: 14pt;
+		}
+	}
+
+	@media (min-width: 751px) and (max-width: 850px) {
+		.achievements__card > .card__info {
+			font-size: 13pt;
+			letter-spacing: 2px;
+		}
+		.achievements__title {
+			letter-spacing: 4px;
+			font-size: 14pt;
+		}
+	}
+
+	@media (min-width: 851px) and (max-width: 1150px) {
+		.achievements__card > .card__info {
+			font-size: 14pt;
+			letter-spacing: 2px;
+		}
+		.achievements__title {
+			letter-spacing: 4px;
+			font-size: 16pt;
+		}
+	}
+</style>

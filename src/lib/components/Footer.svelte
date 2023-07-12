@@ -114,4 +114,45 @@
 		font-size: 8pt;
 		color: var(--text-color-shadow);
 	}
+
+	/* Max 400px */
+	@media (max-width: 400px) {
+		.footer__title {
+			font-size: 18pt;
+		}
+
+		.footer__links {
+			width: 85%;
+		}
+
+		.footer__link {
+			width: 40px;
+			height: 40px;
+		}
+
+		.footer__info {
+			letter-spacing: 1px;
+			font-size: 8pt;
+		}
+	}
+
+	@media (min-width: 401px) and (max-width: 600px) {
+		.footer__title {
+			font-size: 18pt;
+		}
+
+		.footer__links {
+			width: 85%;
+		}
+
+		.footer__link {
+			width: 45px;
+			height: 45px;
+		}
+
+		.footer__info {
+			letter-spacing: 1px;
+			font-size: 8pt;
+		}
+	}
 </style>

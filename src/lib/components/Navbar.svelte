@@ -24,16 +24,21 @@
 	const showOverlay = (): void => {
 		isHidden = !isHidden;
 	};
+
+	const handleNavigate = () => {
+		if (isOverlay && !isHidden) isHidden = true;
+	};
 </script>
 
 <svelte:window bind:innerWidth />
 
 <nav id="nav" class="nav">
 	<img src={logo} class="nav__logo" alt="the website's logo" />
+	<!-- If width is small, render Hamburger Menu -->
 	<ul class={`nav__list ${isOverlay ? 'overlay' : ''} ${isHidden ? 'hidden' : ''}`} id="nav__list">
 		{#each navLinks as navLink}
 			<li class="nav__item">
-				<a class="nav__link" href={navLink.href}
+				<a class="nav__link" href={navLink.href} on:click={handleNavigate}
 					>{navLink.content}
 					{#if navLink.isBadged}
 						<span class="badge new-badge">new</span>
@@ -100,21 +105,6 @@
 		color: var(--primary-color);
 	}
 
-	/* Last Link */
-	/* .nav__list > .nav__item:last-child > .nav__link {
-  padding: 10px 20px;
-  border-radius: 20px;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  transition-property: color;
-  transition: 0.6s ease;
-}
-
-.nav__list > .nav__item:last-child > .nav__link:hover {
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-} */
-
 	/* NAV OVERLAY */
 
 	#nav__overlay-menu-bars {
@@ -173,5 +163,16 @@
 	.overlay > .nav__item:last-child > .nav__link {
 		padding: 20px 55px;
 		border-radius: 0;
+	}
+	@media (min-width: 401px) and (max-width: 600px) {
+		.nav__logo {
+			width: 40px;
+		}
+	}
+
+	@media (min-width: 601px) and (max-width: 750px) {
+		.nav__logo {
+			width: 50px;
+		}
 	}
 </style>

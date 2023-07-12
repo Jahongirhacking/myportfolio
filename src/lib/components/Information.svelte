@@ -67,4 +67,17 @@
 		background-color: white;
 		color: var(--primary-color-dark);
 	}
+
+	/* max 400 */
+	@media (max-width: 400px) {
+		.about_me__info {
+			line-height: 20pt;
+		}
+	}
+
+	@media (min-width: 401px) and (max-width: 600px) {
+		.about_me__info {
+			line-height: 21pt;
+		}
+	}
 </style>

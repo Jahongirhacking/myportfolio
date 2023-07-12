@@ -153,6 +153,7 @@
 		left: 0px;
 		top: -40px;
 		width: 90%;
+		aspect-ratio: 1 / 1;
 		border-radius: 50%;
 		background: linear-gradient(135deg, var(--primary-color), var(--primary-color-shadow));
 		z-index: 0;
@@ -177,5 +178,154 @@
 		bottom: -10px;
 		transform: rotate(80deg);
 		animation: animatePattern 5s ease infinite;
+	}
+
+	/* max 400 */
+	@media (max-width: 400px) {
+		* {
+			--default-padding: 30px;
+			--heading-font-size: 20pt;
+			--info-font-size: 12pt;
+		}
+		#header {
+			flex-direction: column;
+			gap: 20px;
+			padding-top: 70px;
+		}
+		#header > .header__img {
+			order: 1;
+			margin-left: 15px;
+		}
+		#header > .header__info {
+			order: 2;
+			text-align: center;
+		}
+		.header__info > span {
+			font-size: 12pt;
+		}
+		.header__info > .header__my-name {
+			font-size: 18pt;
+		}
+		.header__info > .header__my-job {
+			font-size: 10pt;
+		}
+		.header__info > .header__network {
+			gap: 20px;
+			margin: auto;
+			margin-top: 20px;
+		}
+		.header__network > .header__list {
+			width: 55px;
+			height: 50px;
+			line-height: 50px;
+		}
+		.header__network > .header__list > .header__link {
+			font-size: 30px;
+		}
+	}
+
+	@media (min-width: 401px) and (max-width: 600px) {
+		#header {
+			flex-direction: column;
+			gap: 20px;
+			padding-top: 70px;
+		}
+		#header > .header__img {
+			order: 1;
+			margin-left: 15px;
+			width: 60%;
+		}
+		#header > .header__info {
+			order: 2;
+			text-align: center;
+		}
+		.header__info > span {
+			font-size: 14pt;
+		}
+		.header__info > .header__my-name {
+			font-size: 24pt;
+			max-width: 90%;
+			margin: auto;
+		}
+		.header__info > .header__my-job {
+			font-size: 13pt;
+			margin: auto;
+		}
+		.header__info > .header__network {
+			gap: 30px;
+			margin: auto;
+			margin-top: 20px;
+		}
+		.header__network > .header__list {
+			width: 65px;
+			height: 65px;
+			line-height: 65px;
+		}
+		.header__network > .header__list > .header__link {
+			font-size: 35px;
+		}
+	}
+
+	@media (min-width: 601px) and (max-width: 750px) {
+		#header {
+			flex-direction: column;
+			gap: 35px;
+			padding-top: 80px;
+		}
+		#header > .header__img {
+			order: 1;
+			margin-left: 15px;
+			width: 50%;
+		}
+		#header > .header__info {
+			order: 2;
+			text-align: center;
+		}
+		.header__info > span {
+			font-size: 16pt;
+		}
+		.header__info > .header__my-name {
+			font-size: 26pt;
+			max-width: 90%;
+			margin: auto;
+		}
+		.header__info > .header__my-job {
+			font-size: 13pt;
+			margin: auto;
+		}
+		.header__info > .header__network {
+			gap: 40px;
+			margin: auto;
+			margin-top: 20px;
+		}
+		.header__network > .header__list {
+			width: 75px;
+			height: 75px;
+			line-height: 75px;
+		}
+		.header__network > .header__list > .header__link {
+			font-size: 40px;
+		}
+	}
+
+	@media (min-width: 751px) and (max-width: 850px) {
+		.header__info > span {
+			font-size: 15pt;
+		}
+		.header__info > .header__my-name {
+			font-size: 27pt;
+		}
+		.header__info > .header__network {
+			gap: 40px;
+			margin-top: 20px;
+		}
+		.header__network > .header__list {
+			width: 65px;
+			height: 65px;
+			line-height: 65px;
+		}
+		.header__network > .header__list > .header__link {
+			font-size: 35px;
+		}
 	}
 </style>
