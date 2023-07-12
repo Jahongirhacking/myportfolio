@@ -65,7 +65,6 @@
 		align-items: center;
 		text-align: center;
 		gap: 25px;
-		margin-top: 10px;
 	}
 
 	.footer__title {

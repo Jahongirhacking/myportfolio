@@ -160,6 +160,10 @@
 		transition: transform, 0.4s ease;
 	}
 
+	.header__img:hover > .header__img-shadow {
+		transform: scale(1.05);
+	}
+
 	.header__img > .header__triangle-img {
 		width: 22%;
 		z-index: 2;
