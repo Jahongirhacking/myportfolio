@@ -2,6 +2,7 @@
 	import Fa from 'svelte-fa';
 	import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 	import logo from '$lib/images/logo.png';
+	import { base } from '$app/paths';
 
 	interface Ilinks {
 		href: string;
@@ -10,10 +11,11 @@
 	}
 
 	const navLinks: Ilinks[] = [
-		{ href: '/', content: 'About Me', isBadged: false },
-		{ href: '/portfolio', content: 'Portfolio', isBadged: false },
-		{ href: '/comics', content: 'Comics', isBadged: true }
+		{ href: `${base}/`, content: 'About Me', isBadged: false },
+		{ href: `${base}/portfolio`, content: 'Portfolio', isBadged: false },
+		{ href: `${base}/comics`, content: 'Comics', isBadged: true }
 	];
+	console.dir(base);
 
 	// We can toggle this via fa-bar icon
 	$: innerWidth = 0;
