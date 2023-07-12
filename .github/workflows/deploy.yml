@@ -1,0 +1,49 @@
+name: Deploy on GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js v16 (or another version)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # (or another version)
+      - name: Install dependencies
+        run: npm install
+      - name: Lint
+        run: npm run lint
+      - name: Check
+        run: npm run check
+      - name: Build website
+        run: npm run build
+      - name: Artifacts
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'build/'
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      contents: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v1
