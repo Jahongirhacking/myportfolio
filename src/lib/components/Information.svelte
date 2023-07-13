@@ -2,13 +2,13 @@
 <section id="about_me">
 	<h3 class="about_me__title">About Me</h3>
 	<p class="about_me__info">
-		I am a <span id="my-age" />-year-old Front-End Developer from Uzbekistan. Currently, I am
-		studying at Innopolis University in Tatarstan, Russia and learning modern web frameworks like
-		React JS, also already have generated some small projects so far. During my university courses,
-		I have learned basic concepts of Software Design Patterns, Data Structures and Algorithms
-		especially Graph Theory. Everyday I practice my skills using my favourite programming languages
-		JavaScript and C++ on Leetcode platform. In my opinion, these concepts what I have learned will
-		help you!
+		I am a {new Date().getFullYear() - 2004}-year-old Front-End Developer from Uzbekistan.
+		Currently, I am studying at Innopolis University in Tatarstan, Russia and learning modern web
+		frameworks like React JS, also already have generated some small projects so far. During my
+		university courses, I have learned basic concepts of Software Design Patterns, Data Structures
+		and Algorithms especially Graph Theory. Everyday I practice my skills using my favourite
+		programming languages JavaScript and C++ on Leetcode platform. In my opinion, these concepts
+		what I have learned will help you!
 	</p>
 
 	<a
