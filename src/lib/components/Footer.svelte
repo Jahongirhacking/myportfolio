@@ -30,7 +30,6 @@
 			icon: faLinkedin
 		},
 		{ href: 'https://leetcode.com/Jahongirhacking/', id: 'lc-link', icon: faCode },
-		{ href: 'https://www.instagram.com/jahongir_khayitov/', id: 'ig-link', icon: faInstagram },
 		{ href: 'https://robocontest.uz/profile/jahongir_khayitov', id: 'rb-link', icon: faRobot },
 		{ href: 'mailto:Jahongirhacking@gmail.com', id: 'email', icon: faEnvelope }
 	];
